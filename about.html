@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ClarityWeather — About</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav glass">
+    <a class="brand" href="index.html">
+      <svg class="logo" viewBox="0 0 64 64" width="36" height="36" aria-hidden="true">
+        <circle cx="32" cy="24" r="12" fill="#6dd5fa"></circle>
+        <path d="M16 40a16 16 0 0 1 32 0H16z" fill="#2980b9"></path>
+      </svg>
+      <span>ClarityWeather</span>
+    </a>
+
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="weather.html" class="nav-link">Weather</a>
+      <a href="forecast.html" class="nav-link">Forecast</a>
+      <a href="about.html" class="nav-link active">About</a>
+      <!-- Contact link removed -->
+    </nav>
+
+    <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+  </header>
+
+  <div id="bgContainer" aria-hidden="true">
+    <img src="clouds.svg" class="bg-clouds" alt="">
+    <canvas id="bubblesCanvas" class="bg-bubbles"></canvas>
+    <img src="waves.svg" class="bg-waves" alt="">
+  </div>
+
+  <main class="container">
+    <section class="panel glass gradient-2">
+      <h2>About ClarityWeather</h2>
+      <p>ClarityWeather is a student project built to demonstrate web design, JavaScript API usage, and responsive UX. It showcases a simple, modern design and live weather data using OpenWeatherMap.</p>
+
+      <h3>Features</h3>
+      <ul>
+        <li>Current weather for any city</li>
+        <li>5-day forecast powered by OpenWeatherMap</li>
+        <li>Responsive blue ocean UI</li>
+        <li>Dark / Light theme toggle</li>
+        <li>Animated waves, clouds, and floating bubbles</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 ClarityWeather</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

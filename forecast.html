@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ClarityWeather — 5-Day Forecast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav glass">
+    <a class="brand" href="index.html">
+      <svg class="logo" viewBox="0 0 64 64" width="36" height="36" aria-hidden="true">
+        <circle cx="32" cy="24" r="12" fill="#6dd5fa"></circle>
+        <path d="M16 40a16 16 0 0 1 32 0H16z" fill="#2980b9"></path>
+      </svg>
+      <span>ClarityWeather</span>
+    </a>
+
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="weather.html" class="nav-link">Weather</a>
+      <a href="forecast.html" class="nav-link active">Forecast</a>
+      <a href="about.html" class="nav-link">About</a>
+      <!-- Contact link removed -->
+    </nav>
+
+    <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+  </header>
+
+  <div id="bgContainer" aria-hidden="true">
+    <img src="clouds.svg" class="bg-clouds" alt="">
+    <canvas id="bubblesCanvas" class="bg-bubbles"></canvas>
+    <img src="waves.svg" class="bg-waves" alt="">
+  </div>
+
+  <main class="container">
+    <section class="panel glass gradient-3">
+      <h2>5-Day Forecast</h2>
+
+      <form id="forecastForm" onsubmit="event.preventDefault(); fetchForecastByInput();">
+        <input id="forecastCity" type="text" placeholder="City name (e.g. Delhi)" required>
+        <button class="btn" type="submit">Get Forecast</button>
+      </form>
+
+      <div id="forecastResult" class="forecast-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 ClarityWeather</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ClarityWeather — Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav glass">
+    <a class="brand" href="index.html">
+      <svg class="logo" viewBox="0 0 64 64" width="36" height="36" aria-hidden="true">
+        <circle cx="32" cy="24" r="12" fill="#6dd5fa"></circle>
+        <path d="M16 40a16 16 0 0 1 32 0H16z" fill="#2980b9"></path>
+      </svg>
+      <span>ClarityWeather</span>
+    </a>
+
+    <nav>
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="weather.html" class="nav-link">Weather</a>
+      <a href="forecast.html" class="nav-link">Forecast</a>
+      <a href="about.html" class="nav-link">About</a>
+    </nav>
+
+    <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+  </header>
+
+  <!-- BACKGROUNDS: clouds, waves, and bubbles canvas -->
+  <div id="bgContainer" aria-hidden="true">
+    <img src="clouds.svg" class="bg-clouds" alt="">
+    <canvas id="bubblesCanvas" class="bg-bubbles"></canvas>
+    <img src="waves.svg" class="bg-waves" alt="">
+  </div>
+
+  <main class="container">
+    <section class="hero gradient-1 glass">
+      <h1>ClarityWeather</h1>
+      <p class="lead">Beautiful, simple weather information — realtime & clear.</p>
+      <div class="hero-cta">
+        <a class="btn" href="weather.html">Check Weather</a>
+        <a class="btn ghost" href="forecast.html">5-Day Forecast</a>
+      </div>
+    </section>
+
+    <section class="features">
+      <article class="glass panel">
+        <h3>Realtime weather</h3>
+        <p>Get up-to-date temperature, humidity, wind and description — fast.</p>
+      </article>
+      <article class="glass panel">
+        <h3>5-day forecast</h3>
+        <p>Plan your week with a clean 5-day view and daily highs/lows.</p>
+      </article>
+      <article class="glass panel">
+        <h3>Responsive & modern</h3>
+        <p>Light blue ocean theme, mobile-first layout, and accessible design choices.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 ClarityWeather — Made by Ashwitha</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
